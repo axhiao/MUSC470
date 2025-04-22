@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"The Burning Sound": The Crawford Grill in 1930s Pittsburgh</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0f172a;
+            --gold: #d4af37;
+            --light-gold: #f7e7ce;
+            --accent-blue: #3b82f6;
+        }
+        
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: var(--dark-blue);
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.heinzhistorycenter.org/wp-content/uploads/2021/02/MSP285_B033_F005_I08.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .nav-link {
+            position: relative;
+            color: var(--light-gold);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            border-bottom: 2px solid var(--gold);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            color: var(--gold);
+        }
+        
+        .quote-box {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--light-gold);
+        }
+        
+        .fact-box {
+            background-color: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background-color: var(--gold);
+            left: 0;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            left: -7.5px;
+            top: 10px;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .audio-player {
+            width: 100%;
+            margin: 2rem 0;
+            background-color: rgba(212, 175, 55, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        footer {
+            background-color: #000;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+            min-height: 100vh;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .bibliography-item {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero-image" id="home">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"The Burning Sound"</h1>
+            <h2 class="text-2xl md:text-3xl text-gold font-semibold mb-12">The Crawford Grill in 1930s Pittsburgh and the Struggles for Black Autonomy, Labor, and Spatial Justice</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">An exploration of how a legendary jazz venue became a symbol of resistance, community, and cultural power during the Great Depression</p>
+            <div class="mt-10">
+                <a href="#introduction" class="bg-gold text-gray-900 px-8 py-3 rounded-full font-bold hover:bg-opacity-80 transition duration-300">Begin Tour</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-gray-900 py-4 z-50 shadow-md border-b border-gold">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center overflow-x-auto py-2">
+                <a href="#introduction" class="nav-link">Introduction</a>
+                <a href="#setting-the-stage" class="nav-link">Setting the Stage</a>
+                <a href="#gus-greenlee" class="nav-link">Gus Greenlee</a>
+                <a href="#new-space" class="nav-link">A New Kind of Space</a>
+                <a href="#economic-independence" class="nav-link">Economic Independence</a>
+                <a href="#musical-labor" class="nav-link">Musical Labor</a>
+                <a href="#social-hub" class="nav-link">Social Hub</a>
+                <a href="#spatial-justice" class="nav-link">Spatial Justice</a>
+                <a href="#numbers-racket" class="nav-link">Numbers Racket</a>
+                <a href="#challenges" class="nav-link">Challenges</a>
+                <a href="#legacy" class="nav-link">Legacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4">
+        <!-- Introduction Section -->
+        <section id="introduction" class="section">
+            <h2 class="section-title text-4xl font-bold">Introduction - The Hill District in the 1930s</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">From the 1930s to the 1950s, Pittsburgh's Hill District emerged as one of the most prosperous and influential Black communities in America. This vibrant neighborhood was a cultural crossroads where jazz flourished amidst the harsh realities of the Great Depression and racial segregation.</p>
+                    <p class="mb-4">The Hill District, often referred to as "the crossroads of the world," became a central hub of African American life, home to a thriving business district, cultural venues, and social organizations. As the Great Depression swept across America, the Hill District maintained its cultural vitality, becoming an incubator for musical innovation and social resistance.</p>
+                    
+                    <div class="quote-box">
+                        "From the 1930s until the 1950s, the Hill District was known as the 'crossroads of the world.' Music, art, culture and commerce thrived in this neighborhood, which attracted both locals and tourists."
+                    </div>
+                    
+                    <p class="mb-4">By 1930, the Black population in the Hill District had more than doubled since 1910, with approximately 50,000 Black residents. This demographic shift created a concentration of Black cultural, economic, and social power that would transform Pittsburgh's urban landscape.</p>
+                </div>
+                <div>
+                    <img src="https://i.pinimg.com/564x/1f/6e/aa/1f6eaa14b4f199c0dc83cce90c631550.jpg" alt="Hill District 1930s" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">Hill District street scene in the 1930s</p>
+                    
+                    <div class="fact-box mt-6">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">Key Facts: Hill District in the 1930s</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>By 1930, approximately 50,000 Black residents lived in the Hill District</li>
+                            <li>The neighborhood featured around 25 synagogues, reflecting its early Jewish heritage</li>
+                            <li>The streets were still cobblestone while the rest of the city had progressed to modern paving</li>
+                            <li>Despite economic hardships, the Hill District maintained thriving entertainment venues and businesses</li>
+                            <li>Only 1% of Lower Hill residents owned their homes in 1930</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">The Cultural Landscape</h3>
+                <div class="image-gallery">
+                    <img src="https://www.heinzhistorycenter.org/wp-content/uploads/2021/02/MSP285_B033_F005_I08.jpg" alt="Crawford Grill Exterior" class="gallery-image">
+                    <img src="https://static.timesofisrael.com/jewishchronicle/uploads/2020/10/hill-photo.jpg" alt="Hill District Historical Photo" class="gallery-image">
+                    <img src="https://www.shorpy.com/files/images/Pittsburgh_diner.preview.jpg" alt="Pittsburgh Hill District diner" class="gallery-image">
+                </div>
+                
+                <p class="mt-4">The Hill District's cultural vitality stood in stark contrast to the economic challenges of the Depression era. The neighborhood's street life, vibrant clubs, and community spaces created opportunities for creative expression and social connection, laying the groundwork for institutions like the Crawford Grill to emerge as critical spaces for Black cultural and economic life.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Listen to the Sounds of the Era</h4>
+                <div class="audio-player">
+                    <p class="mb-2">Listen to "Pittsburgh, PA: The Sounds of Pittsburgh Jazz | Places of Invention"</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QniuWs6oKG0" title="The Sounds of Pittsburgh Jazz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setting the Stage Section -->
+        <section id="setting-the-stage" class="section">
+            <h2 class="section-title text-4xl font-bold">Setting the Stage: Prohibition Ends, A New Era Begins</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">The repeal of Prohibition in 1933 marked a pivotal moment for nightlife in Pittsburgh's Hill District. During the Prohibition era (1920-1933), speakeasies and underground establishments had flourished, creating a foundation for what would become legitimate entertainment venues in the post-Prohibition landscape.</p>
+                    
+                    <p class="mb-4">As legal alcohol sales resumed, businesses like the Crawford Grill could emerge from the shadows, transforming from speakeasies into legitimate nightclubs. This transition coincided with the deepening of the Great Depression, creating a complex economic environment where entertainment venues became even more important as spaces of escape and community.</p>
+                    
+                    <div class="quote-box">
+                        "The Hill's black community, restricted by the economic downturn and racial politics, supported music and social events through social and fraternal organizations such as the Loendi Social Club and Knights of Pythias. Nightlife and jazz were also bolstered by illegal rackets such as 'numbers running,' which allowed black entrepreneurs such as William 'Gus' Greenlee and William 'Woogie' Harris to establish long running clubs and support local and touring musicians."
+                    </div>
+                    
+                    <p class="mb-4">This period saw jazz becoming more fully integrated into the neighborhood's social and economic fabric, evolving from entertainment into a cultural force that helped sustain community resilience during hard times.</p>
+                </div>
+                <div>
+                    <img src="https://newsinteractive.post-gazette.com/prohibition/images/Web.RomeCafe.jpg" alt="Prohibition Era Pittsburgh" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">A speakeasy in Pittsburgh during the Prohibition era</p>
+                    
+                    <div class="timeline mt-8">
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gold">1920-1933</h4>
+                            <p>Prohibition era creates underground network of speakeasies and illegal alcohol distribution in the Hill District</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gold">1929</h4>
+                            <p>Stock market crash initiates the Great Depression, severely affecting industrial cities like Pittsburgh</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gold">1933</h4>
+                            <p>Repeal of Prohibition allows for legal establishment of nightclubs and bars</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gold">1930s</h4>
+                            <p>Gus Greenlee establishes the first Crawford Grill in the Hill District</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">The Cultural Impact of Prohibition's End</h3>
+                
+                <div class="fact-box">
+                    <h4 class="text-xl text-accent-blue font-bold mb-2">The Transformation of Nightlife</h4>
+                    <p>The end of Prohibition created new opportunities for Black entrepreneurs to establish legitimate businesses, though they still operated within a system of segregation and limited economic opportunity. The transition from illegal speakeasies to licensed clubs reshaped the cultural landscape of urban Black communities across America, with Pittsburgh's Hill District exemplifying this transformation.</p>
+                </div>
+                
+                <p class="mt-6">The Depression-era economic constraints meant that new technologies like jukeboxes, first commercially available in 1934, became ubiquitous in the 1930s as post-Prohibition bars, restaurants, and lounges sought cheaper alternatives to live music. This technological shift impacted the professional lives of musicians, creating both challenges and opportunities for live music venues like the Crawford Grill.</p>
+                
+                <p class="mt-4">The cultural landscape of the Hill District after Prohibition was characterized by the dual forces of legitimization and continued struggle against economic and racial barriers. This dynamic environment created the conditions for spaces like the Crawford Grill to emerge not just as entertainment venues, but as critical sites of community building and cultural resistance.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Watch: Pittsburgh's Prohibition Era</h4>
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/BWMD6ADR4DY" title="Pittsburgh's Vanished Jazz Era Clubs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gus Greenlee Section -->
+        <section id="gus-greenlee" class="section">
+            <h2 class="section-title text-4xl font-bold">Who Was Gus Greenlee?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://sabrweb.b-cdn.net/wp-content/uploads/2012/01/23-Gus-Greenlee-solo-300-dpi-NoirTech-542x423.jpg" alt="Gus Greenlee" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">William "Gus" Greenlee (1893-1952)</p>
+                    
+                    <div class="fact-box mt-6">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">Key Facts: Gus Greenlee</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Born December 26, 1893 in Marion, North Carolina</li>
+                            <li>Migrated to Pittsburgh and initially worked in the steel industry</li>
+                            <li>Became a prominent numbers banker in Pittsburgh's Hill District</li>
+                            <li>Owner of the Pittsburgh Crawfords Negro League baseball team</li>
+                            <li>Built Greenlee Field, the first Black-owned baseball stadium in the country (1932-1938)</li>
+                            <li>Established the Negro National League and hosted its first meeting</li>
+                            <li>Died July 7, 1952 in Pittsburgh at age 58</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-4">William "Gus" Greenlee was much more than a club owner; he was a transformative figure in Pittsburgh's Black community who leveraged his business acumen and community connections to create institutions that elevated Black culture, entertainment, and sports during the Depression era.</p>
+                    
+                    <p class="mb-4">Born in North Carolina in 1893, Greenlee migrated to Pittsburgh as a young man. After serving in World War I, he established himself as a businessman in the Hill District. While his wealth came substantially from the illegal numbers racket, Greenlee reinvested his earnings into legitimate businesses and community institutions.</p>
+                    
+                    <div class="quote-box">
+                        "They helped promote jazz in Pittsburgh even though their names are little more than a footnote in the city's musical history. Gus Greenlee was king of the numbers racket in the city's Hill District, raking in millions of dollars off the pennies of the poor and desperate."
+                    </div>
+                    
+                    <p class="mb-4">By the 1930s, Greenlee had become one of the most influential figures in Pittsburgh's Black community. His portfolio included the Crawford Grill, the Pittsburgh Crawfords baseball team, and Greenlee Field, the only Black-owned baseball stadium in the country during its existence from 1932 to 1938.</p>
+                    
+                    <p class="mb-4">Greenlee exemplified a complex type of Black entrepreneurship that emerged during this era—men who operated both within and outside the law, leveraging resources from illicit enterprises to build legitimate businesses and cultural institutions that served their communities in the face of segregation and economic marginalization.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Greenlee's Legacy Beyond Music</h3>
+                
+                <div class="image-gallery">
+                    <img src="https://9b16f79ca967fd0708d1-2713572fef44aa49ec323e813b06d2d9.ssl.cf2.rackcdn.com/1140x_a10-7_cTC/7hl00k54-TIF-1568760663.jpg" alt="Gus Greenlee with Pittsburgh Crawfords" class="gallery-image">
+                    <img src="https://hillhistory.org/files/fullsize/192d014b19834323ade1c8887569ed6c.jpg" alt="Greenlee Field" class="gallery-image">
+                    <img src="https://verylocal.com/wp-content/uploads/migration/121/630c739c-figure-03.jpeg" alt="Gus Greenlee Numbers Racket" class="gallery-image">
+                </div>
+                
+                <p class="mt-6">Greenlee's influence extended well beyond the entertainment world. By the end of Prohibition, he hosted the first meeting of the Negro National League (NNL), bringing together team owners and representatives from throughout the East and Midwest. His Pittsburgh Crawfords team became one of the most dominant in Negro League baseball, featuring stars like Satchel Paige and Josh Gibson.</p>
+                
+                <p class="mt-4">When Greenlee opened the Crawford Grill in the 1930s, he created a space that would become central to Pittsburgh's jazz scene and Black social life. The club was more than just a business venture—it was part of Greenlee's broader vision for creating spaces of Black autonomy and cultural expression in a segregated city.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Learn More About Gus Greenlee</h4>
+                <div class="video-container">
+                    <p class="mb-2">Negro Leagues 101: William "Gus" Greenlee</p>
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/FTl-UPTgbZ0" title="PITTSBURGH, PA: The Crawford Grill: A Home for Pittsburgh Jazz | Places of Invention" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Crawford Grill No. 1 Section -->
+        <section id="new-space" class="section">
+            <h2 class="section-title text-4xl font-bold">The Crawford Grill No. 1: A New Kind of Space</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">The Crawford Grill No. 1 opened in the 1930s on the corner of Townsend Street and Wylie Avenue in the Lower Hill District. This pioneering establishment represented a new kind of cultural space in Pittsburgh—one owned and operated by Black entrepreneurs that served as both an entertainment venue and a community gathering place.</p>
+                    
+                    <p class="mb-4">The original Crawford Grill occupied the first floor of a building at 1401 Wylie Avenue, with the second floor housing the Paramount Club—a members-only after-hours social club that attracted patrons from across the city. The physical space of the Crawford Grill embodied the cultural aspirations of Pittsburgh's Black community during the Depression era.</p>
+                    
+                    <div class="quote-box">
+                        "Crawford Grill No. 1 opened in the 1930s on the corner of Townsend Street and Wylie Avenue in the Lower Hill District. This is one of about a dozen images taken in the Crawford Grill, probably in the mid- to late 1940s."
+                    </div>
+                    
+                    <p class="mb-4">The Crawford Grill's architecture and interior design created an atmosphere of sophistication and elegance, providing patrons with an experience that challenged the demeaning stereotypes of Black culture prevalent in mainstream society. From its stylish decor to its reputation for excellent service, the Crawford Grill projected an image of Black excellence and autonomy in a society that routinely denied Black people's humanity and dignity.</p>
+                </div>
+                <div>
+                    <img src="https://www.heinzhistorycenter.org/wp-content/uploads/2021/02/CrawfordGrill.jpg" alt="Crawford Grill Interior" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">Interior of the Crawford Grill showing the elegant atmosphere</p>
+                    
+                    <div class="fact-box">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">Crawford Grill No. 1: At a Glance</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Location: 1401 Wylie Avenue, Pittsburgh</li>
+                            <li>Opened: 1930s</li>
+                            <li>Closed: 1951</li>
+                            <li>Owner: William "Gus" Greenlee</li>
+                            <li>Manager in early years: Frank Sutton</li>
+                            <li>Featured live music and recorded music on jukeboxes</li>
+                            <li>First floor: Public restaurant and club</li>
+                            <li>Second floor: The Paramount Club (members-only after-hours social club)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Building a Cultural Institution</h3>
+                
+                <p class="mb-4">The Crawford Grill quickly established itself as more than just a nightclub—it became a cultural institution central to Pittsburgh's Black community. As historian Rob Ruck noted, establishments like the Crawford Grill were "essential for establishing future jazz clubs that provided local and touring musicians places for organizing, networking, training, and performing as well as providing Pittsburgh audiences sites for interracial socializing around music."</p>
+                
+                <div class="image-gallery">
+                    <img src="https://i.dailymail.co.uk/i/pix/2012/04/30/article-0-12A39DA2000005DC-126_964x759.jpg" alt="Crawford Grill Musicians" class="gallery-image">
+                    <img src="https://i.dailymail.co.uk/i/pix/2012/04/30/article-0-12A39D8B000005DC-821_964x704.jpg" alt="Crawford Grill Patrons" class="gallery-image">
+                    <img src="https://secretpittsburgh.org/static/6be2ddff22f34cca189bfc6e87c571ec/15bb4/crawford_grill_1.jpg" alt="Crawford Grill Exterior" class="gallery-image">
+                </div>
+                
+                <p class="mt-6">The dearth of entertainment at the Grill in the early 1930s could be the result of Greenlee's focus on sports as well as manager Frank Sutton's preference for recorded music. As technologies like jukeboxes became more prevalent, venues had to navigate the balance between recorded and live music, adapting to the economic constraints of the Depression era.</p>
+                
+                <p class="mt-4">Despite these challenges, the Crawford Grill established a tradition of musical excellence that would be expanded with the opening of Crawford Grill No. 2 in later years. The original Crawford Grill laid the groundwork for what would become a legendary jazz venue, creating a template for Black-owned entertainment spaces that combined business success with cultural significance and community service.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Exploring the Crawford Grill's Space</h4>
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/IziEwJZG_qU" title="Heinz museum inside the Crawford grill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Economic Independence Section -->
+        <section id="economic-independence" class="section">
+            <h2 class="section-title text-4xl font-bold">Economic Independence: Black Entrepreneurship</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://verylocal.com/wp-content/uploads/migration/88/3740f1bf-figure-02-1080x619.jpeg" alt="Hill District Businesses" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">Black-owned businesses in Pittsburgh's Hill District, 1930s</p>
+                    
+                    <div class="fact-box mt-6">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">Black Business in the Great Depression</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>The Great Depression devastated Black businesses nationwide, with many facing closure</li>
+                            <li>In Pittsburgh's Hill District, some entrepreneurs found alternative revenue streams through illegal enterprises like numbers running</li>
+                            <li>These illicit funds were often reinvested in legitimate businesses that served the community</li>
+                            <li>Black-owned venues created jobs during a time of severe unemployment</li>
+                            <li>The economic ecosystem of the Hill District circulated money within the community</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-4">The Crawford Grill represented a powerful example of Black entrepreneurship during an era when economic autonomy was particularly difficult for Black Americans to achieve. Opened during the Great Depression, the club demonstrated the resilience and ingenuity of Black business owners who created successful enterprises despite systemic barriers to capital, credit, and market access.</p>
+                    
+                    <p class="mb-4">For Gus Greenlee and other Black entrepreneurs in Pittsburgh, ownership of businesses like the Crawford Grill provided economic independence from white-controlled employment markets that routinely discriminated against Black workers. These businesses created jobs for Black workers, from musicians and bartenders to waitstaff and cooks, generating economic opportunity within the community.</p>
+                    
+                    <div class="quote-box">
+                        "Numbers bankers William 'Gus' Greenlee and William 'Woogie' Harris sprang from its telling as heroic figures who paid off on the bets placed with them. After securing millions in daily transactions of nickels, dimes and quarters from ordinary Pittsburghers, they redistributed this wealth through businesses, real estate and philanthropy."
+                    </div>
+                    
+                    <p class="mb-4">The economic significance of the Crawford Grill extended beyond its direct employment. As a venue that attracted patrons from across the city, it brought revenue into the Hill District that might otherwise have been spent elsewhere. This economic multiplier effect strengthened the neighborhood's business district and contributed to its development as a center of Black economic power.</p>
+                    
+                    <p class="mb-4">Moreover, Greenlee's investment in the Crawford Grill demonstrated a form of community reinvestment, where profits generated within the neighborhood were recycled into new businesses that served local needs and enhanced the area's cultural life. This model of economic development provided a blueprint for sustainable community growth in a segregated city.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">The Broader Network of Black Enterprise</h3>
+                
+                <p class="mb-4">The Crawford Grill was part of a broader ecosystem of Black-owned businesses in the Hill District that collectively provided services, products, and entertainment to residents. From barbershops and beauty salons to restaurants and theaters, these enterprises formed an economic network that helped sustain the community during the challenges of the Depression.</p>
+                
+                <p class="mb-4">Black entrepreneurs like William "Woogie" Harris, Gus Greenlee's sometimes partner in the numbers business, also invested in real estate and other legitimate businesses. The Hill District became a showcase for Black economic achievement, demonstrating the community's capacity for business success when barriers to opportunity were overcome.</p>
+                
+                <div class="quote-box">
+                    "Black and tan clubs were important sites of socialization and revenue for their owners. Like the Crawford Grill, these establishments—such as the Collins Inn owned by Harry Collins—were often supported by profits from illicit enterprises that created pathways to legitimate business ownership for Black entrepreneurs in a system that otherwise limited their economic opportunities."
+                </div>
+                
+                <p class="mt-6">The economic independence fostered by businesses like the Crawford Grill had political implications as well. By controlling their own economic resources, Black business owners gained greater ability to advocate for community interests, support political candidates, and resist discriminatory policies. Economic power translated into community influence in ways that challenged the racial hierarchy of Depression-era Pittsburgh.</p>
+            </div>
+        </section>
+
+        <!-- Musical Labor Section -->
+        <section id="musical-labor" class="section">
+            <h2 class="section-title text-4xl font-bold">Musical Labor: A Stage for Artists</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">The Crawford Grill served as a crucial venue for Black musicians, offering performance opportunities and income during the economic hardship of the Great Depression. For jazz artists, clubs like the Crawford Grill provided not only employment but also creative spaces where they could develop their craft, collaborate with other musicians, and connect with audiences.</p>
+                    
+                    <p class="mb-4">In an era when technological changes like the jukebox threatened live music, the Crawford Grill's commitment to featuring performances helped sustain the careers of local and touring musicians. The work of performing was both economically necessary and artistically fulfilling, allowing musicians to develop Pittsburgh's distinctive jazz sound.</p>
+                    
+                    <div class="quote-box">
+                        "Young George Spaulding and Alyce Brooks bolstered Pittsburgh's jazz scene as well as advocated for jazz musicians as members and leaders of the city's Black local chapter of the American Federation of Musicians."
+                    </div>
+                    
+                    <p class="mb-4">Musicians at the Crawford Grill were workers whose labor produced cultural value that enhanced the club's reputation and commercial success. At the same time, they were artists whose creative expression gave voice to the experiences, struggles, and aspirations of Pittsburgh's Black community during a time of economic and social upheaval.</p>
+                </div>
+                <div>
+                    <img src="https://i.dailymail.co.uk/i/pix/2012/04/30/article-0-12A39CFB000005DC-301_470x595.jpg" alt="Jazz Musician at Crawford Grill" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">Musician performing at the Crawford Grill</p>
+                    
+                    <div class="fact-box">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">The Working Musician's Reality</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>The Depression drastically reduced income for many musicians</li>
+                            <li>New technologies like jukeboxes (first commercially available in 1934) threatened live music jobs</li>
+                            <li>Black musicians faced racial discrimination in many venues</li>
+                            <li>Clubs like the Crawford Grill provided reliable employment</li>
+                            <li>Musicians often played multiple venues in a single night to make ends meet</li>
+                            <li>The American Federation of Musicians' Black local chapter advocated for fair treatment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">The Pittsburgh Sound and Its Creators</h3>
+                
+                <div class="image-gallery">
+                    <img src="https://cmoa-collection-images.s3.amazonaws.com/thing/5288/1025891.jpg" alt="Pittsburgh Jazz Orchestra" class="gallery-image">
+                    <img src="https://www.heinzhistorycenter.org/wp-content/uploads/2021/02/1997_0097_Crawford-Grill-scaled.jpg" alt="Crawford Grill Performance" class="gallery-image">
+                    <img src="https://storage.googleapis.com/clio-images/large_7394_Screen%20Shot%202021-04-02%20at%201.58.27%20PM.jpg" alt="Jazz Performers" class="gallery-image">
+                </div>
+                
+                <p class="mt-6">Pittsburgh developed a distinctive jazz tradition that drew from the city's industrial character and diverse immigrant communities. Musicians who performed at the Crawford Grill contributed to this unique sound, which later influenced national jazz trends through artists like Billy Eckstine, Mary Lou Williams, Erroll Garner, and Art Blakey who began their careers in Hill District venues.</p>
+                
+                <p class="mt-4">The Crawford Grill functioned as an informal conservatory where younger musicians could learn from established artists, developing their skills through mentorship and jam sessions. This educational function was particularly important for Black musicians who were excluded from many formal music education opportunities due to segregation.</p>
+                
+                <div class="quote-box">
+                    "Music promoters like McKinney Hall and club owners like Harry Collins and Harry Hendel played crucial roles in creating performance opportunities for jazz musicians. Ann Simmons Dunlap, known as 'Birdie,' was booking acts in Pittsburgh such as Louis Armstrong and Fats Waller at the Motor Square Garden in East Liberty as early as 1935."
+                </div>
+                
+                <p class="mt-6">Musicians' labor at the Crawford Grill produced more than just entertainment—it created cultural capital that enhanced the prestige of Pittsburgh's Black community and challenged racist stereotypes. The excellence of these performers demonstrated Black artistic achievement in ways that subtly contested the racial hierarchies of American society during the Depression era.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">The Legacy of Pittsburgh Jazz</h4>
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/yjVb8AH2s4A" title="PITTSBURGH, PA: Pittsburgh Jazz Innovation: 1920—1970 | Places of Invention" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Hub Section -->
+        <section id="social-hub" class="section">
+            <h2 class="section-title text-4xl font-bold">Social Hub: Where Pittsburgh Met</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://i.dailymail.co.uk/i/pix/2012/04/30/article-0-12A39DA2000005DC-126_964x759.jpg" alt="Crawford Grill Patrons" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">Diverse patrons enjoying music at the Crawford Grill</p>
+                    
+                    <div class="fact-box mt-6">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">The Crawford Grill's Diverse Clientele</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Pittsburgh's elite white clientele, including Art Rooney (owner of the Pittsburgh Steelers) and department store owner Edgar Kaufmann</li>
+                            <li>Local and visiting athletes, including players from the Negro Leagues</li>
+                            <li>Politicians and public officials</li>
+                            <li>Working-class patrons from the Hill District</li>
+                            <li>Visiting jazz musicians and entertainers</li>
+                            <li>College students and intellectuals</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-4">The Crawford Grill functioned as a vital social hub where Pittsburgh's diverse communities came together around music and entertainment. In a city marked by racial segregation and class divisions, the club created a space where these boundaries could be temporarily transcended, allowing for cross-cultural exchange and interracial socialization that was rare in Depression-era America.</p>
+                    
+                    <p class="mb-4">On weekends, Pittsburgh's elite white clientele, including figures like Art Rooney (owner of the Pittsburgh Steelers) and department store owner Edgar Kaufmann, would visit the Crawford Grill to enjoy its music and atmosphere. These patrons mixed with the club's primarily Black clientele, creating an unusual social environment where racial barriers were lessened, if not eliminated.</p>
+                    
+                    <div class="quote-box">
+                        "Black and white patrons mixed easily in the Crawford Grill because of their shared appreciation for jazz and the club's welcoming atmosphere, which was unusual in segregated Pittsburgh."
+                    </div>
+                    
+                    <p class="mb-4">For the Hill District's residents, the Crawford Grill provided a community gathering place where they could socialize, celebrate, and temporarily escape the hardships of Depression-era life. The club hosted community events, birthday parties, and celebrations that strengthened neighborhood bonds and fostered a sense of collective identity.</p>
+                    
+                    <p class="mb-4">Beyond entertainment, the social connections formed at the Crawford Grill sometimes led to business partnerships, political alliances, and creative collaborations that benefited the broader community. As a nexus of social interaction, the club facilitated relationships that extended beyond its walls into various aspects of Pittsburgh's civic and cultural life.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Creating Community Through Shared Experience</h3>
+                
+                <p class="mb-4">The social atmosphere of the Crawford Grill was carefully cultivated to balance sophistication with accessibility, creating a space where patrons from different backgrounds could feel comfortable. The club's reputation for excellent service, quality entertainment, and a welcoming environment made it a destination not just for Hill District residents but for music lovers from across the city and beyond.</p>
+                
+                <div class="quote-box">
+                    "The audience at the Hurricane [another Hill District club] was diverse. The Pittsburgh Press described the scene as 'motley. You'll rub elbows with society folks, chorus girls, musicians, pimps, con men, businessmen, chorus girls, socialites, reporters, nightclub entertainers, and visiting celebrities.'"
+                </div>
+                
+                <p class="mt-6">The social experience of the Crawford Grill was inseparable from its musical offerings. Jazz created a shared language that transcended social differences, allowing patrons to connect through their appreciation for the music's emotional power and artistic brilliance. These shared aesthetic experiences fostered a sense of community among the club's diverse clientele.</p>
+                
+                <p class="mt-4">For Black patrons in particular, the Crawford Grill offered a space of dignity and respect at a time when they faced discrimination in many other public venues. The club's Black ownership and management ensured that it remained a space where the community's needs and preferences were centered, even as it welcomed white patrons.</p>
+                
+                <p class="mt-4">The social significance of the Crawford Grill extended to its role in Pittsburgh's nightlife ecosystem. As part of a network of clubs, restaurants, and entertainment venues in the Hill District, it contributed to the neighborhood's reputation as a vibrant cultural center where people could experience the best of Black music, food, and social life.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Pittsburgh's Crawford Grill: A Social Institution</h4>
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/xC-GXOIBpIA" title="Pittsburgh's Crawford Grill struggles to keep jazz tradition alive (1989)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spatial Justice Section -->
+        <section id="spatial-justice" class="section">
+            <h2 class="section-title text-4xl font-bold">Spatial Justice: Claiming Space in a Segregated City</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">The Crawford Grill represented a powerful claim to urban space in a city where racism and segregation severely limited Black access to public venues and commercial property. By establishing a Black-owned and operated nightclub in the heart of the Hill District, Gus Greenlee created a space of Black autonomy and self-determination that challenged the spatial logics of racial segregation.</p>
+                    
+                    <p class="mb-4">During the 1930s, segregation restricted Black Pittsburghers' access to many downtown venues and neighborhoods. The creation of vibrant cultural spaces like the Crawford Grill in the Hill District was thus not merely a business decision but a political act that asserted Black people's right to occupy, own, and shape urban space on their own terms.</p>
+                    
+                    <div class="quote-box">
+                        "In a widespread campaign of voter intimidation, the Courier estimated that nearly half of the Hill's registered Black voters were prevented from voting. This struggle for the voting rights of Hill residents was but one way that black and tan cabarets became embedded in the city's political, economic, and cultural life."
+                    </div>
+                    
+                    <p class="mb-4">The physical location of the Crawford Grill on Wylie Avenue—the main commercial thoroughfare of the Hill District—gave it prominence in the neighborhood's landscape. Its visibility made it a symbol of Black achievement and creativity in a city that often rendered Black people invisible in official narratives and public representations.</p>
+                </div>
+                <div>
+                    <img src="https://cdn.savingplaces.org/2017/02/23/17/29/45/546/RONALD-WOAN-(CC-BY-NC-ND-2.jpg" alt="Hill District Street" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">Wylie Avenue in Pittsburgh's Hill District</p>
+                    
+                    <div class="fact-box">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">Spatial Inequalities in 1930s Pittsburgh</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Black residents were restricted to specific neighborhoods through formal and informal segregation</li>
+                            <li>Only 1% of Lower Hill residents owned their homes in 1930</li>
+                            <li>Urban infrastructure like street paving was neglected in Black neighborhoods</li>
+                            <li>Black businesses faced barriers to securing commercial property outside designated areas</li>
+                            <li>Black patrons were unwelcome or relegated to inferior accommodations in many downtown venues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Creating Black Geographies</h3>
+                
+                <p class="mb-4">The Crawford Grill was part of what scholars call "Black geographies"—spaces created and sustained by Black communities that offered alternatives to white-dominated urban landscapes. These Black-created spaces were sites of both refuge from discrimination and resistance to racist spatial practices.</p>
+                
+                <div class="image-gallery">
+                    <img src="https://newsinteractive.post-gazette.com/lower_hill/img/Gilmore/DSC_4228_compressed.jpg" alt="Lower Hill District" class="gallery-image">
+                    <img src="https://i.redd.it/42cjbl7fd2q51.jpg" alt="Hill District Housing" class="gallery-image">
+                    <img src="https://afd-vpyaeen54dwxi-hqb9hvbtcufwbac3.z01.azurefd.net/app/uploads/2023/09/Screen-Shot-2021-02-12-at-4.00.39-PM-e1706731287812-1024x614.jpg" alt="Hill District Street Scene" class="gallery-image">
+                </div>
+                
+                <p class="mt-6">Inside the Crawford Grill, the spatial arrangement reflected both business considerations and cultural values. The establishment's two floors—a public restaurant and club on the first floor and the members-only Paramount Club on the second floor—created a graduated social space that accommodated different needs and preferences while maintaining the club's overall character.</p>
+                
+                <p class="mt-4">The interracial mingling that occurred at the Crawford Grill challenged the spatial segregation that characterized much of Pittsburgh's social landscape. By bringing together Black and white patrons in a Black-owned space, the club inverted the usual power dynamics of interracial interactions in public venues, where white ownership and preferences typically dominated.</p>
+                
+                <div class="quote-box">
+                    "Jazz clubs that followed in the footsteps of the first Crawford Grill, as well as black and tan cabarets such as the Leader House and Collins Inn, were integral to developing the neighborhood as a vibrant and valued cultural center in the region."
+                </div>
+                
+                <p class="mt-6">The Crawford Grill's claim to urban space took on additional significance in the context of Pittsburgh's changing urban landscape. As the city began to consider urban renewal projects that would eventually displace many Hill District residents, spaces like the Crawford Grill represented the community's rightful place in the city—a claim that would be contested in later decades as urban planners and developers sought to reshape the neighborhood.</p>
+            </div>
+        </section>
+
+        <!-- Numbers Racket Section -->
+        <section id="numbers-racket" class="section">
+            <h2 class="section-title text-4xl font-bold">The "Numbers Racket": Fueling the Scene</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://verylocal.com/wp-content/uploads/migration/88/3740f1bf-figure-02-1080x619.jpeg" alt="Numbers Running" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">The numbers racket provided funding for legitimate businesses in the Hill District</p>
+                    
+                    <div class="fact-box mt-6">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">The Numbers Game Explained</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>The "numbers" was an illegal lottery popular in urban Black communities</li>
+                            <li>Players bet pennies, nickels, and dimes on a three-digit number</li>
+                            <li>Winning numbers were often derived from published financial figures like stock market reports</li>
+                            <li>Neighborhood "runners" collected bets and distributed winnings</li>
+                            <li>Odds of winning were typically 1 in 1,000, with payouts of 600 to 1</li>
+                            <li>The game generated substantial profits for "bankers" who managed the operations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-4">The Crawford Grill and much of Pittsburgh's jazz scene during the Depression era were financially sustained by proceeds from the "numbers racket"—an illegal lottery that flourished in urban Black communities across America. Gus Greenlee, owner of the Crawford Grill, was one of Pittsburgh's most successful numbers bankers, using profits from this illicit enterprise to fund legitimate businesses that served the community.</p>
+                    
+                    <p class="mb-4">In the context of the Great Depression and systemic discrimination that limited Black access to traditional business capital, the numbers racket provided an alternative funding source for Black entrepreneurs. The cash flow from numbers operations allowed figures like Greenlee to invest in entertainment venues, sports teams, and other businesses that created jobs and services for the community.</p>
+                    
+                    <div class="quote-box">
+                        "Nightlife and jazz were also bolstered by illegal rackets such as 'numbers running,' which allowed black entrepreneurs such as William 'Gus' Greenlee and William 'Woogie' Harris to establish long running clubs and support local and touring musicians."
+                    </div>
+                    
+                    <p class="mb-4">While illegal, the numbers racket had a complex relationship with the community it served. Many Hill District residents saw operators like Greenlee not as criminals but as community benefactors who provided economic opportunities and reinvested in the neighborhood. The numbers game also created a financial infrastructure that circulated money within the Black community at a time when many banks refused to serve Black customers or businesses.</p>
+                    
+                    <p class="mb-4">Numbers bankers often enjoyed significant social status and political influence in their communities. Greenlee's position as a successful numbers operator gave him connections throughout Pittsburgh's political and business worlds, relationships he could leverage to protect his legitimate enterprises like the Crawford Grill and advocate for community interests.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">The Economic Ecosystem of the Numbers</h3>
+                
+                <p class="mb-4">The numbers racket created an economic ecosystem that supported numerous community institutions beyond just nightclubs. Churches, fraternal organizations, civil rights groups, and charitable endeavors all benefited from donations from successful numbers operators, who often sought to legitimize their wealth and status through philanthropy.</p>
+                
+                <div class="quote-box">
+                    "A big numbers hit in 1930 created Pittsburgh mob legends. Numbers bankers William 'Gus' Greenlee and William 'Woogie' Harris sprang from its telling as heroic figures who paid off on the bets placed with them. After securing millions in daily transactions of nickels, dimes and quarters from ordinary Pittsburghers, they redistributed this wealth through businesses, real estate and philanthropy."
+                </div>
+                
+                <p class="mt-6">The numbers game itself was deeply embedded in community life and culture. Players developed elaborate systems for selecting numbers, often based on dreams, signs, or personal events. Policy shops where bets were placed became social centers where neighborhood residents gathered to exchange news and information.</p>
+                
+                <p class="mt-4">The relationship between illegal numbers operations and legitimate businesses like the Crawford Grill illustrates the complex survival strategies developed by Black communities in response to economic exclusion. When denied access to conventional business opportunities, entrepreneurs created alternative economic systems that, while operating outside the law, provided essential resources for community development.</p>
+                
+                <div class="image-gallery">
+                    <img src="https://verylocal.com/wp-content/uploads/migration/121/630c739c-figure-03.jpeg" alt="Numbers Operators" class="gallery-image">
+                    <img src="https://verylocal.com/wp-content/uploads/migration/90/1cbe3b3d-figure-04-1080x729.jpeg" alt="Pittsburgh Numbers Scene" class="gallery-image">
+                    <img src="https://media.npr.org/assets/img/2021/02/02/01---russ-and-mary_wide-fa05868beabb2e16e8c9dac9ba72fc05b47d6471.jpg" alt="Hill District Businesses" class="gallery-image">
+                </div>
+                
+                <p class="mt-6">The eventual legalization of gambling through state lotteries in later decades would appropriate the numbers game model without benefiting the communities that had developed it. This transition exemplifies how Black cultural and economic innovations were often criminalized when controlled by Black entrepreneurs but legitimized and profited from when taken over by white-dominated institutions.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Watch: The Big Numbers Hit</h4>
+                <div class="video-container">
+                    <p class="mb-2">Learn about the numbers racket that funded Pittsburgh's jazz scene</p>
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/fYKcfvroL9U" title="Exploring the history of jazz in Pittsburgh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges and Complexities Section -->
+        <section id="challenges" class="section">
+            <h2 class="section-title text-4xl font-bold">Challenges and Complexities</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">The Crawford Grill's story, while celebrated for its cultural significance and community impact, also contained tensions and contradictions that reflect the complex realities of Black life in Depression-era Pittsburgh. These challenges included the moral ambiguities of numbers-funded enterprises, internal class divisions within the Black community, and the precarious nature of Black businesses in a racist economic system.</p>
+                    
+                    <p class="mb-4">The club's financial dependence on proceeds from the illegal numbers racket created complicated ethical questions. While the numbers game provided an alternative funding source in a financial system that excluded Black entrepreneurs, it also extracted resources from working-class and poor community members who could ill afford to lose their bets, especially during the economic hardship of the Depression.</p>
+                    
+                    <div class="quote-box">
+                        "Gus Greenlee was king of the numbers racket in the city's Hill District, raking in millions of dollars off the pennies of the poor and desperate."
+                    </div>
+                    
+                    <p class="mb-4">The Crawford Grill's sophisticated atmosphere and relatively high prices meant that it primarily served a middle-class clientele that could afford its entertainment offerings. This created potential class tensions within the Black community, as venues like the Crawford Grill catered to the more affluent while excluding poorer residents who lacked the means to participate in this aspect of neighborhood cultural life.</p>
+                </div>
+                <div>
+                    <img src="https://pittsburghquarterly.com/wp-content/uploads/articles/the-bad-old-days-368x172.jpg" alt="Depression Era Pittsburgh" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">The challenges of Depression-era Pittsburgh affected the Hill District</p>
+                    
+                    <div class="fact-box">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">Competing Tensions</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Moral ambiguity of numbers-funded businesses that both extracted from and reinvested in the community</li>
+                            <li>Class divisions between the Black elite who frequented clubs and working-class residents who couldn't afford them</li>
+                            <li>Tensions between jazz as authentic cultural expression and as commodified entertainment</li>
+                            <li>The risks of Black businesses dependent on white patronage and political protection</li>
+                            <li>The precarious balance between legitimate businesses and illegal operations</li>
+                            <li>The double-edged nature of interracial socialization that both challenged and reinforced racial hierarchies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Navigating a Hostile System</h3>
+                
+                <p class="mb-4">Black business owners like Greenlee operated in a system where their success depended on navigating complex relationships with white political and economic power structures. The Crawford Grill's operation required maintaining connections with local officials, police, and politicians who could either protect or threaten the club's existence depending on shifting political winds.</p>
+                
+                <p class="mb-4">The interracial socialization that occurred at the Crawford Grill, while breaking down some racial barriers, also contained ambiguities. White patrons who enjoyed Black cultural productions at the club did not necessarily support broader movements for racial justice and equality outside its walls. The act of white people consuming Black culture in Black spaces could both challenge and reinforce racial hierarchies in complex ways.</p>
+                
+                <div class="quote-box">
+                    "The Hill District's vice wars of the Prohibition Era demonstrated that black and tan clubs were important sites of socialization and revenue for their owners, but they were also vulnerable to targeted enforcement and closure, particularly during political conflicts."
+                </div>
+                
+                <p class="mt-6">For musicians, the Crawford Grill provided both opportunities and constraints. While the club offered performance spaces and income, musicians also had to navigate the commercial demands of entertaining paying customers, which could sometimes limit their artistic freedom and innovation. The balance between artistic expression and commercial viability created tensions that affected how jazz developed as both an art form and a product.</p>
+                
+                <p class="mt-4">The Great Depression itself presented enormous challenges to maintaining businesses like the Crawford Grill. Economic hardship reduced disposable income for entertainment, making it difficult to sustain cultural institutions even as they became more important as spaces of community resilience and psychological relief from the stresses of economic crisis.</p>
+                
+                <p class="mt-4">These complexities do not diminish the Crawford Grill's significance but rather highlight the difficult terrain that Black cultural institutions had to navigate during this period. The club's ability to survive and thrive despite these challenges testifies to the resourcefulness of its owners and the community that supported it.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Watch: Uncovering Pittsburgh's Jazz History</h4>
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/MFOK1SI7tJo" title="\"A History of Pittsburgh Jazz\" with Richard Gazarik & Karen Anthony Cole" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section id="legacy" class="section">
+            <h2 class="section-title text-4xl font-bold">Legacy: "The Burning Sound"</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">The Crawford Grill's legacy extends far beyond its years of operation, continuing to influence our understanding of Black cultural resistance, entrepreneurship, and community building during the Great Depression. The "burning sound" of jazz that emanated from its stage represented not just artistic expression but a powerful assertion of Black humanity and dignity in the face of economic hardship and racial oppression.</p>
+                    
+                    <p class="mb-4">This pioneering venue established a template for Black-owned cultural spaces that would flourish in later decades. The Crawford Grill demonstrated that such spaces could serve multiple functions simultaneously: providing entertainment, creating economic opportunity, fostering community connections, and claiming urban space for Black cultural expression.</p>
+                    
+                    <div class="quote-box">
+                        "Jazz clubs that followed in the footsteps of the first Crawford Grill, as well as black and tan cabarets such as the Leader House and Collins Inn, were integral to developing the neighborhood as a vibrant and valued cultural center in the region."
+                    </div>
+                    
+                    <p class="mb-4">The Crawford Grill's story helps us understand how Black communities responded to the Great Depression through cultural innovation and economic adaptation. While facing disproportionate hardship during the economic crisis, Black entrepreneurs and artists created institutions that not only provided survival strategies but also celebrated Black creativity and resilience.</p>
+                </div>
+                <div>
+                    <img src="https://9b16f79ca967fd0708d1-2713572fef44aa49ec323e813b06d2d9.ssl.cf2.rackcdn.com/1140x_a10-7_cTC/7hl00k54-TIF-1568760663.jpg" alt="Crawford Grill Legacy" class="rounded-lg shadow-lg mb-4">
+                    <p class="text-sm text-gray-400 italic">The Crawford Grill's cultural legacy continues to influence Pittsburgh</p>
+                    
+                    <div class="fact-box">
+                        <h4 class="text-xl text-accent-blue font-bold mb-2">The Crawford Grill's Enduring Impact</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Established a model for Black cultural venues that combined entertainment with community building</li>
+                            <li>Contributed to Pittsburgh's reputation as a major jazz center</li>
+                            <li>Demonstrated the potential of Black entrepreneurship despite systemic barriers</li>
+                            <li>Created a space where racial boundaries could be challenged through musical exchange</li>
+                            <li>Inspired subsequent generations of cultural institutions in the Hill District</li>
+                            <li>Became a symbol of the neighborhood's cultural significance and resilience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Remembering and Reclaiming</h3>
+                
+                <p class="mb-4">The eventual closure of the original Crawford Grill in 1951 marked the end of its physical operation but not its cultural significance. The venue lives on in community memory, historical documentation, and ongoing efforts to preserve and honor the Hill District's jazz heritage. These commemorative practices ensure that the lessons and inspirations of the Crawford Grill continue to inform contemporary struggles for cultural autonomy and economic justice.</p>
+                
+                <div class="image-gallery">
+                    <img src="https://www.heinzhistorycenter.org/wp-content/uploads/2021/02/MSP285_B033_F005_I08.jpg" alt="Crawford Grill Remembered" class="gallery-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/CrawG013_Fix.jpg" alt="Crawford Grill Historic" class="gallery-image">
+                    <img src="https://carnegiemuseums.org/magazine-archive/2015/winter/assets/w15-crawford-4.jpg" alt="Crawford Grill Legacy" class="gallery-image">
+                </div>
+                
+                <p class="mt-6">Contemporary jazz musicians, community organizers, and cultural workers continue to draw inspiration from the Crawford Grill's example. The club's history demonstrates the power of cultural spaces to nurture community resilience, challenge oppressive systems, and create alternative economic models that center community needs and aspirations.</p>
+                
+                <div class="quote-box">
+                    "Through the struggles for Black autonomy, labor justice, and spatial rights, the Crawford Grill exemplified how cultural institutions could serve as sites of resistance and community building during times of economic crisis and racial oppression."
+                </div>
+                
+                <p class="mt-6">The "burning sound" that gives this exhibit its title refers not only to the hot jazz played at the Crawford Grill but also to the fiery spirit of determination and creativity that animated the venue and the community it served. This sound continues to echo through Pittsburgh's cultural landscape, reminding us of the power of music and community to transform difficult circumstances into opportunities for expression, connection, and change.</p>
+                
+                <p class="mt-4">As we face contemporary economic challenges and ongoing struggles for racial justice, the Crawford Grill offers valuable lessons about the role of cultural spaces in sustaining communities and fostering resistance. Its legacy invites us to consider how we might create and support venues that, like the Crawford Grill, serve not just as places of entertainment but as engines of community empowerment and cultural preservation.</p>
+            </div>
+            
+            <div class="mt-8">
+                <h4 class="text-xl font-semibold text-accent-blue mb-2">Watch: The Crawford Grill's Place in History</h4>
+                <div class="video-container">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/FTl-UPTgbZ0" title="PITTSBURGH, PA: The Crawford Grill: A Home for Pittsburgh Jazz | Places of Invention" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bibliography Section -->
+        <section id="bibliography" class="section">
+            <h2 class="section-title text-4xl font-bold">Bibliography & References</h2>
+            
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Primary Sources</h3>
+                <div class="bibliography-item">Crawford Grill Collection, Senator John Heinz History Center, Pittsburgh, PA.</div>
+                <div class="bibliography-item">Pittsburgh Courier, 1930-1950. African American newspaper with extensive coverage of the Hill District and the Crawford Grill.</div>
+                <div class="bibliography-item">Oral History Interviews with musicians who performed at the Crawford Grill, Heinz History Center Oral History Collection.</div>
+                <div class="bibliography-item">Photographs of the Crawford Grill and the Hill District, Charles "Teenie" Harris Archive, Carnegie Museum of Art.</div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Secondary Sources</h3>
+                <div class="bibliography-item">Gazarik, Richard. <i>A History of Pittsburgh Jazz: Swinging in the Steel City</i>. Charleston, SC: The History Press, 2022.</div>
+                <div class="bibliography-item">Harper, Colter. <i>Jazz in the Hill</i>. Pittsburgh: University of Pittsburgh Press, 2023.</div>
+                <div class="bibliography-item">"The Crawford Grill." Heinz History Center Blog, February 9, 2021. https://www.heinzhistorycenter.org/blog/western-pennsylvania-history-the-crawford-grill/</div>
+                <div class="bibliography-item">Whitaker, Mark. <i>Smoketown: The Untold Story of the Other Great Black Renaissance</i>. New York: Simon & Schuster, 2018.</div>
+                <div class="bibliography-item">Ruck, Rob. <i>Sandlot Seasons: Sport in Black Pittsburgh</i>. Urbana: University of Illinois Press, 1987.</div>
+                <div class="bibliography-item">"Gus Greenlee and the Crawford Grills." Society for American Baseball Research, August 1, 2023. https://sabr.org/research/article/gus-greenlee-and-the-crawford-grills/</div>
+                <div class="bibliography-item">"The History of the Hill District." Hill Community Development Corp. https://www.hilldistrict.org/history/</div>
+                <div class="bibliography-item">"A Big Numbers Hit in 1930 Created Pittsburgh Mob Legends." Very Local Pittsburgh. https://www.verylocal.com/pittsburgh-mob-woogie-harris-gus-greenlee/1271/</div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Image Credits</h3>
+                <div class="bibliography-item">Historic photographs of the Crawford Grill courtesy of the Heinz History Center, Pittsburgh, PA.</div>
+                <div class="bibliography-item">Photographs of the Hill District and Pittsburgh jazz scene from the Charles "Teenie" Harris Archive, Carnegie Museum of Art.</div>
+                <div class="bibliography-item">Images of Gus Greenlee and the Pittsburgh Crawfords courtesy of the Society for American Baseball Research.</div>
+                <div class="bibliography-item">Contemporary photographs of the Hill District by Pittsburgh Post-Gazette photographers.</div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gold mb-4">Project Credits</h3>
+                <div class="bibliography-item">Project Title: "The Burning Sound": The Crawford Grill in 1930s Pittsburgh and the Struggles for Black Autonomy, Labor, and Spatial Justice</div>
+                <div class="bibliography-item">Student: Xixin Cui (xc0014@mix.wvu.edu)</div>
+                <div class="bibliography-item">Course: MUSC 470C Jazz and Politics</div>
+                <div class="bibliography-item">Institution: West Virginia University</div>
+                <div class="bibliography-item">Date: Spring 2025</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-center py-12">
+        <div class="container mx-auto px-4">
+            <h3 class="text-gold text-2xl font-bold mb-4">"The Burning Sound"</h3>
+            <p class="text-gray-400 mb-8">The Crawford Grill in 1930s Pittsburgh and the Struggles for Black Autonomy, Labor, and Spatial Justice</p>
+            <p class="text-gray-500">© 2025 Xixin Cui | MUSC 470C Jazz and Politics | West Virginia University</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Highlight active section in navigation
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('text-gold');
+                    
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('text-gold');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
