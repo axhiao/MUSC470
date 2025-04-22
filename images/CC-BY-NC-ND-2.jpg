@@ -1,0 +1,14 @@
+--2025-04-22 08:03:31--  https://cdn.savingplaces.org/2017/02/23/17/29/45/546/RONALD-WOAN-(CC-BY-NC-ND-2.jpg
+Resolving cdn.savingplaces.org (cdn.savingplaces.org)... 3.171.139.45, 3.171.139.10, 3.171.139.61, ...
+Connecting to cdn.savingplaces.org (cdn.savingplaces.org)|3.171.139.45|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 178754 (175K) [image/jpeg]
+Saving to: ‘RONALD-WOAN-(CC-BY-NC-ND-2.jpg’
+
+     0K .......... .......... .......... .......... .......... 28% 2.02M 0s
+    50K .......... .......... .......... .......... .......... 57% 4.99M 0s
+   100K .......... .......... .......... .......... .......... 85% 4.59M 0s
+   150K .......... .......... ....                            100% 2.92M=0.05s
+
+2025-04-22 08:03:31 (3.22 MB/s) - ‘RONALD-WOAN-(CC-BY-NC-ND-2.jpg’ saved [178754/178754]
+
